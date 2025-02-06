@@ -1,18 +1,18 @@
 [submodule "plugins"]
 	path = plugins
-	url = https://github.com/I-TECH-UW/openelisglobal-plugins.git
+	url = https://github.com/faisalijaz1/lims.git
 [submodule "tools/Liquibase-Outdated"]
 	path = tools/Liquibase-Outdated
-	url = https://github.com/I-TECH-UW/Liquibase-Outdated.git
+	url = https://github.com/faisalijaz1/lims.git
 [submodule "tools/Password-Migrator"]
 	path = tools/Password-Migrator
-	url = https://github.com/I-TECH-UW/Password-Migrator.git
+	url = https://github.com/faisalijaz1/lims.git
 [submodule "Consolidated-Server"]
 	path = Consolidated-Server
-	url = git@github.com:I-TECH-UW/Consolidated-Server.git
+	url = https://github.com/faisalijaz1/lims.git
 [submodule "hapi-fhir-jpaserver-starter"]
 	path = hapi-fhir-jpaserver-starter
-	url = https://github.com/I-TECH-UW/hapi-fhir-jpaserver-starter.git
+	url = https://github.com/faisalijaz1/lims.git
 [submodule "dataexport"]
 	path = dataexport
-	url = https://github.com/I-TECH-UW/dataexport.git
+	url = https://github.com/faisalijaz1/lims.git
