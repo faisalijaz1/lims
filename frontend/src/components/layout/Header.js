@@ -20,6 +20,7 @@ import React, {
 } from "react";
 import { FormattedMessage, injectIntl, useIntl } from "react-intl";
 import { withRouter } from "react-router-dom";
+import { Button } from "@carbon/react";
 import UserSessionDetailsContext from "../../UserSessionDetailsContext";
 import "../Style.css";
 import { ConfigurationContext } from "../layout/Layout";
@@ -42,7 +43,12 @@ import {
 import SlideOverNotifications from "../notifications/SlideOverNotifications";
 import { getFromOpenElisServer, putToOpenElisServer } from "../utils/Utils";
 import SearchBar from "./search/searchBar";
+// import ThemeSelector from '../CustomComponent/ThemeSelector';
+import { Sun, Moon } from "@carbon/icons-react"; // Import icons from Carbon
+
 function OEHeader(props) {
+  const { onToggleTheme } = props; // Receive the function
+
   const { configurationProperties } = useContext(ConfigurationContext);
   const { userSessionDetails, logout } = useContext(UserSessionDetailsContext);
 
@@ -71,6 +77,7 @@ function OEHeader(props) {
   }, []);
 
   useEffect(() => {
+    
     getFromOpenElisServer("/rest/menu", (res) => {
       handleMenuItems("menu", res);
     });
@@ -448,6 +455,13 @@ function OEHeader(props) {
                   <HeaderGlobalBar>
                     {userSessionDetails.authenticated && (
                       <>
+                        {/* <Button onClick={onToggleTheme} kind="secondary">
+          Toggle Theme
+        </Button> */}
+          <div className="theme-toggle" onClick={onToggleTheme}>
+        {props.darkMode ? <Sun size={24} /> : <Moon size={24} />} {/* Toggle icon */}
+      </div>
+                        {/* <ThemeSelector handleSelectionChange={props.onThemeChange} /> */}
                         {searchBar && <SearchBar />}
                         <HeaderGlobalAction
                           aria-label="Search"

@@ -42,6 +42,13 @@ import NonConformIndex from "./components/nonconform/index";
 import SampleBatchEntrySetup from "./components/batchOrderEntry/SampleBatchEntrySetup.js";
 import AuditTrailReportIndex from "./components/reports/auditTrailReport/Index.js";
 import ReferredOutTests from "./components/resultPage/resultsReferredOut/ReferredOutTests.js";
+// import { GlobalTheme } from '@carbon/react';
+
+// import ThemeSelector from './components/CustomComponent/ThemeSelector';
+
+// let currentTheme = 'white';
+// (window.matchMedia('(prefers-color-scheme: dark)').matches) ? currentTheme = 'g100' : currentTheme = 'white';
+
 
 export default function App() {
   let i18nConfig = {
@@ -49,15 +56,18 @@ export default function App() {
     defaultLocale: "en",
     messages: messages_en,
   };
-
+  // const [selectedTheme, setSelectedTheme] = useState(currentTheme);
   const [userSessionDetails, setUserSessionDetails] = useState({});
   const [errorLoadingSessionDetails, setErrorLoadingSessionDetails] =
     useState(false);
   const [locale, setLocale] = useState("en");
 
   useEffect(() => {
+ 
     getUserSessionDetails();
   }, []);
+
+ 
 
   const getUserSessionDetails = async () => {
     let counter = 0;
@@ -221,6 +231,7 @@ export default function App() {
   };
 
   return (
+    // <GlobalTheme theme={selectedTheme}>
     <IntlProvider
       locale={i18nConfig.locale}
       key={i18nConfig.locale}
@@ -237,6 +248,7 @@ export default function App() {
         }}
       >
         <>
+        {/* <ThemeSelector handleSelectionChange={handleChange} /> */}
           <Router>
             <Layout onChangeLanguage={onChangeLanguage}>
               <Switch>
@@ -532,5 +544,6 @@ export default function App() {
         </>
       </UserSessionDetailsContext.Provider>
     </IntlProvider>
+    // </GlobalTheme>
   );
 }

@@ -49,7 +49,7 @@
     "yup": "^0.29.2"
   },
   "scripts": {
-    "start": "GENERATE_SOURCEMAP=false HTTPS=true react-scripts start",
+    "start": "GENERATE_SOURCEMAP=true HTTPS=true react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
@@ -80,6 +80,8 @@
     "**/@types/react": "16.14.5"
   },
   "devDependencies": {
+    "@types/react": "^19.0.8",
+    "@types/react-dom": "^19.0.3",
     "cypress": "^12.17.3",
     "cypress-xpath": "^2.0.1",
     "eslint": "^8.48.0",
@@ -88,6 +90,7 @@
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "prettier": "^3.3.2",
-    "sass": "^1.57.1"
+    "sass": "^1.57.1",
+    "typescript": "^4.9.5"
   }
 }

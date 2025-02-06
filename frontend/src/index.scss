@@ -18,10 +18,25 @@
 .cds--content {
   margin-top: 3rem;
   padding: 0;
-  background-color: #f5f6f8;
+  // background-color: #f5f6f8;
 }
 
 .loginPageContent {
   padding-top: 3rem;
   background: var(--cds-background);
 }
+
+.theme-toggle {
+  cursor: pointer;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  border-radius: 50%;
+  transition: background 0.3s ease;
+}
+
+.theme-toggle:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+

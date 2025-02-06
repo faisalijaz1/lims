@@ -14,8 +14,11 @@ RUN --mount=target=/var/lib/apt/lists,type=cache,sharing=locked \
 # OE Default Password
 ARG DEFAULT_PW="adminADMIN!"
 COPY ./install/createDefaultPassword.sh /build/install/createDefaultPassword.sh
-WORKDIR /build
-RUN ./install/createDefaultPassword.sh -c -p ${DEFAULT_PW}
+RUN chmod +x /build/install/createDefaultPassword.sh
+RUN /bin/bash /build/install/createDefaultPassword.sh -c -p ${DEFAULT_PW}
+
+
+
 
 ##
 # Build DataExport

@@ -20,7 +20,8 @@ import {
   Tabs,
   TabList,
   Tag,
-} from "@carbon/react";
+} from '@carbon/react';
+
 import "./Dashboard.css";
 import { Minimize, Maximize, ArrowLeft, ArrowRight } from "@carbon/react/icons";
 import { Copy } from "@carbon/icons-react";

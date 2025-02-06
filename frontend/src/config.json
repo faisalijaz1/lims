@@ -1,5 +1,5 @@
 {
-  "title": "Cote d'Ivoire Regional Laboratory LIS",
+  "title": "Laboratory Management System",
   "loginRedirect": "/login",
   "serverBaseUrl": "/api/OpenELIS-Global"
 }
