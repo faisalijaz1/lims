@@ -1,7 +1,7 @@
 [submodule "plugins"]
 	path = plugins
 	url = https://github.com/faisalijaz1/plugins.git
-	branch = develop
+	branch = main
 [submodule "tools/Liquibase-Outdated"]
 	path = tools/Liquibase-Outdated
 	url = https://github.com/faisalijaz1/Liquibase-Outdated
